@@ -1,6 +1,7 @@
 # FAQ accordion card
 
-![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
+![image](https://user-images.githubusercontent.com/92840840/204251641-cd3b809f-09cf-415b-bd33-96510246b8a0.png)
+![image](https://user-images.githubusercontent.com/92840840/204251734-2499ad9a-f5e1-49ef-8991-9411b04c5010.png)
 
 #
 
