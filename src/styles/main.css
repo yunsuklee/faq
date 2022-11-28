@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+.App {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(hsl(273deg, 75%, 66%) 50%, hsl(240deg, 73%, 65%) 100%);
+}
+.App #picture-box-container {
+  display: none;
+}
+.App .background {
+  width: 90%;
+  height: 70%;
+  background-color: white;
+  position: relative;
+  margin: 0 auto;
+  top: 20%;
+  border-radius: 25px;
+  box-shadow: 0 10px 100px -10px hsl(238deg, 29%, 16%);
+}
+.App .background .background-picture {
+  width: 100%;
+  height: 35%;
+  position: relative;
+  top: -20%;
+}
+.App .background .background-picture #picture,
+.App .background .background-picture #picture-shadow {
+  width: 75%;
+  max-width: 330px;
+  position: relative;
+  z-index: 10;
+  display: block;
+  margin: 0 auto;
+}
+.App .background .background-picture #picture-shadow {
+  z-index: 1;
+  top: -35%;
+}
+
+@media (min-width: 1200px) {
+  .App {
+    display: flex;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+  }
+  .App .background {
+    max-width: 1300px;
+    position: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  .App .background #picture-box-container {
+    display: block;
+    position: absolute;
+    left: -4.7%;
+    top: 42%;
+    z-index: 100;
+    width: 20%;
+    max-width: 288px;
+  }
+  .App .background #picture-box-container #picture-box {
+    content: url("../assets/illustration-box-desktop.svg");
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    height: 100%;
+  }
+  .App .background #picture-box-container #picture-box:hover {
+    transform: translateX(-15%);
+    cursor: pointer;
+  }
+  .App .background .background-picture {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .App .background .background-picture #picture {
+    content: url("../assets/illustration-woman-online-desktop.svg");
+    max-width: unset;
+    width: 100%;
+    left: -17%;
+  }
+  .App .background .background-picture #picture-shadow {
+    content: url("../assets/bg-pattern-desktop.svg");
+    position: absolute;
+    max-width: unset;
+    width: 200%;
+    top: -55%;
+    right: 17%;
+  }
+}
+@media (min-width: 1444px) {
+  .App .background #picture-box-container {
+    left: calc((100vw - 1300px) / 2 - 140px);
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  top: -12%;
+}
+.container .container-title {
+  margin: 10% 0 5% 0;
+}
+.container .container-questions {
+  width: 100%;
+  height: 70%;
+  padding: 8%;
+  padding-top: 0;
+  overflow-y: scroll;
+}
+.container .container-questions .container-questions_question {
+  min-height: 40px;
+  display: block;
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  margin-top: 20px;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+.container .container-questions .container-questions_question h5 {
+  display: inline-block;
+  font-size: 0.85rem;
+}
+.container .container-questions .container-questions_question p {
+  width: 90%;
+  margin: 10px 0 20px 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out;
+}
+.container .container-questions .container-questions_question .hidden {
+  opacity: 0;
+  position: absolute;
+  top: -50%;
+}
+.container .container-questions .container-questions_question .bold {
+  color: black;
+  font-weight: 700;
+}
+.container .container-questions .container-questions_question .arrow-down {
+  width: 12px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url("../assets/icon-arrow-down.svg");
+  background-size: 100%;
+  background-position: center;
+  float: right;
+  transition: transform 0.4s ease-in-out;
+}
+.container .container-questions .container-questions_question .arrow-down:hover {
+  cursor: pointer;
+}
+.container .container-questions .container-questions_question .up {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 850px) {
+  .background .container .container-title {
+    margin: 5% 0 5% 0;
+  }
+}
+@media (min-width: 1200px) {
+  .background .container {
+    width: 100%;
+    height: 100%;
+    top: unset;
+  }
+  .background .container .container-title {
+    width: 100%;
+    margin: 15% 0 5% 0;
+    font-size: 2.5rem;
+  }
+  .background .container .container-questions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    padding-right: 15%;
+    margin-bottom: 5%;
+  }
+  .background .container .container-questions .container-questions_question h5 {
+    transition: all 0.1s ease-in-out;
+    font-size: 1rem;
+  }
+  .background .container .container-questions .container-questions_question p {
+    font-size: 1rem;
+  }
+  .background .container .container-questions .container-questions_question:hover {
+    cursor: pointer;
+  }
+  .background .container .container-questions .container-questions_question:hover h5 {
+    font-weight: 700;
+    color: hsl(14deg, 88%, 65%);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.bold,
+h1 {
+  font-weight: 700;
+}
+
+h5 {
+  color: hsl(237deg, 12%, 33%);
+  font-weight: 400;
+}
+
+.regular,
+p {
+  font-weight: 400;
+  font-size: 12px;
+  color: hsl(240deg, 6%, 50%);
+}/*# sourceMappingURL=main.css.map */

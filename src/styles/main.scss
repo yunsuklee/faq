@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+@import 'variables';
+@import 'App';
+@import 'Questions';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: $font-family;
+}
+
+.bold,
+h1 {
+  font-weight: $font-weight-bold;
+}
+
+h5 {
+  color: $dark-grayish-blue;
+  font-weight: $font-weight-regular;
+}
+
+.regular,
+p {
+  font-weight: $font-weight-regular;
+  font-size: $font-size-body;
+  color: $very-dark-grayish-blue;
+}

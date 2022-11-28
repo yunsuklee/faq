@@ -1,33 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React from 'react'
+import Questions from './Questions.jsx'
+import { questionsList } from './questionsList.js'
+import './styles/main.css'
+
+import womanMobile from './assets/illustration-woman-online-mobile.svg'
+import shadowMobile from './assets/bg-pattern-mobile.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="background">
+        <div id="picture-box-container">
+          <img id="picture-box" src="" alt=""></img>
+        </div>
+        <figure className="background-picture">
+          <img id="picture" src={womanMobile} alt=""></img>
+          <img id="picture-shadow" src={shadowMobile} alt=""></img>
+        </figure>
+        <Questions 
+          currentQuestions={questionsList}
+        />    
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      {/*
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </div> 
+      */}
     </div>
   )
 }
